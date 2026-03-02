@@ -441,7 +441,7 @@ class PlayableTableCell: BasicTableCell {
     // We only need extra space beyond what optionsButton area (30pt) already provides
     let songRating = playable.asSong?.rating ?? 0
     let isRatingVisible = appDelegate.storage.settings.user.isShowRating && songRating > 0
-    let starWidth = CGFloat(songRating * 8 + 2)  // Actual star width for this rating
+    let starWidth = CGFloat(songRating * 8 + 2) // Actual star width for this rating
     let ratingExtraSpace: CGFloat = isRatingVisible ? max(0, starWidth - 26) + 6 : 0.0
 
     if traitCollection.horizontalSizeClass == .regular {
